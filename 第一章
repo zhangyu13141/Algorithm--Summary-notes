@@ -1,0 +1,20 @@
+桶排序：建立一个数组，哪个数字出现一次，相应数字的下标所对应得存数字加一，
+#include <stdio.h>
+int main(){
+int a[11],i,j,t;
+for(i=0;i<=10;i++){
+a[i]=0;//初始化为零
+}
+for(i=1;i<=5;i++){
+scanf("%d",&t);
+a[t]++;//循环读入5个数
+}
+for(i=0;i<=10;i++)//循环判断
+for(j=1;j<=a[i];j++){//出现几次就打印几次
+printf("%d",i);
+getchar();getchar();
+return 0;
+ }
+}
+时间复杂度O（M+N）
+
