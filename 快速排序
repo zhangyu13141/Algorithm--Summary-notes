@@ -1,0 +1,41 @@
+快速排序就是选一个基准值，一般选择第一个数为基准值，作为参照数，让i 指向最左边，
+j指向最右边，i一步一步的向右挪，j一步一步的向左挪，
+从左边和右边分别找第一个大于基准值的数和小于基准值的数，
+找到后交换俩值，然后i和j在开始挪直到i和j相遇，
+这个时候交换基准值和i,j相遇的位置，然后，在基准值左右两边，
+分别进行找基准值交换的操作
+快速排序相比冒泡排序，每次交换都是跳跃式的交换，总得比较次数和交换次数就少了
+最坏时间复杂度是o(n方)，平均时间复杂度是o(nlogn)
+＃include<stdio.h>
+int a[101],n;
+void quicksort(int left,int right)
+{
+int i,j,t,temp;
+if(left>right)return;
+temp=a[left];
+i=left;
+j=right;
+while(i!=j){
+while(a[j]>=temp&&i<j)j--;
+while(a[i]<=temp&&i<j)i++l
+if(i<j)
+{
+t=a[i];a[i]=a[j];a[j]=t;}
+}
+a[left]=a[i];
+a[i]=temp;
+quicksort(left,i-1);
+quicksort(i+1,right);
+}
+int main(){
+int i,j;
+scanf("%d",&n);
+for(i=1;i<=n;i++){
+scanf("%d",&a[i]);
+}
+quicksort(1,n);
+for(i=1;i<=ni++)
+print("%d",a[i]);
+getchar();getchar();
+retrun 0;
+}
