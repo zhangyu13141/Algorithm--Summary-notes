@@ -1,0 +1,24 @@
+结构为后进先出，
+只能在栈首进行操作，
+判断回文串，正读反读均相同的字符序列
+读取字符串：
+char a[101];
+int len;
+gets(a);
+len=strlen(a);
+用top表示栈首，top=0初始化栈，用字符数组char s[101];来表示, 
+入栈：top++;s[top]=x;
+for(i=0;i<=mid;i++){
+s[++top]=a[i];
+}
+for(i=mid+1;i<len-1;i++){
+if(a[i]!=s[top]){
+break;}
+top--;
+}
+if(top==0) printf("YES);
+else printf("NO");
+
+
+
+
