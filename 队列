@@ -1,0 +1,71 @@
+队列利用数组存储，定义一个数组，
+定义两个整形变量head用来记录队首和tail队尾的下一个位置，
+两个整形变量之间的就是队列的有效的数，队列逻辑形式，
+数组存储形式，俩的结合，逻辑形式相当于抽取抽象模式，
+队列的特点是和排队一样，从队首删除，队尾加入，先进先出
+head和tail重合时队列为空
+不为空的时候循环，head和tail相当于数组下标的位置作用
+在数组中进行增删改查，删和增需要全部移动数组，比较麻烦，
+直接操作数组，所以引入两个变量来纪录队列的队首和队尾，
+如果要删除一个数，head++,加入一个元素把书放到队尾q[tail],
+之后再tail++，
+虽然浪费了一些空间但是却节省了大量的时间，非常划算
+#include <stdio.h>
+int q[102]={0,6,3,1,7,5,8,9,2,4};
+int head=1,tail=10;
+while(head<tail){
+printf("%d",q[head]);
+head++;
+q[tail]=q[head];
+tail++;
+head++;}
+return 0;
+}
+将队列三个元素封装为一个结构体类型
+struct queue{
+int data[100];
+int head;
+int tail;
+};
+struct是结构体的关键字，queue是结构体的名字，结构体有三个成员：
+整型数组data,整型head,整型tail。把三个部分放在一起作为一整体来对待，
+每一个变量可以存储一个整型数组和俩个整型，
+struct queue q;//定义结构体变量
+访问结构体内部成员变量用点号.
+q.head=1;
+q.tail=1;
+scanf("%d",&q.data[q.tail]);
+代码：
+#include <stdio.h>
+struct queue{
+int data[100];
+int head;
+int tail;
+};
+int main(){
+struct queue q;
+int i;
+q.head=1;
+q.tail=1;
+for(i=1;i<=9;i++){
+scang("%d",&q.data[q.tail]);
+q.tail++}
+while(q.head<q.tail){
+printf("%s",q.data[q.tail])
+q.head++:
+q.data[tail]=q.data[head];
+q.tail++;
+q.head++;
+}
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
