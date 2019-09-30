@@ -1,0 +1,68 @@
+#include<stdio.h>
+int main(){
+int *p;//定义一个整数型指针只能存放整数的内存空间的地址，
+int a;
+p=&a;//p指向a内存空间的地址
+printf("%d",*p);//输出p所指向内存空间存储的数值
+return 0;
+}
+int *p;
+p=(int *)malloc(sizeof(int));
+//p指向由malloc函数深情的int型字节大小的内存空间，并强制转换为整数型指针
+*p=10;
+
+链表：
+struct node{
+int data;
+struct node *next;
+};
+struct node *head;
+head=null;
+struct node *p;
+p=(int *)malloc(sizeof(int));
+scanf("%d",&a);
+p->data=a;
+p->next=null;
+if(head=null)
+head=p;
+else q->next=p;
+q=p;
+完整代码如下：
+#include <stdio.h>
+#include<stdlib.h>
+struct node{
+int data;
+struct *next;
+};
+int main(){
+struct node *p,*head,*q,*t;
+int 1,n,a;
+scanf("%d",&n);
+head=null;
+for(i=1;i<=n;i++){
+scanf("%d",&a);
+p=(struct node *)malloc(sizeof(int));
+p->data=a;
+p->next=null;
+if(head==null) head=p;
+else q=p;
+q=p;}
+scanf("%d",&a);
+t=head;
+while(t!=null){
+if(t->next==null||t->next->data>a){
+p=(struct node *)malloc(sizeof(int));
+p->data=a;
+p->next=t->next;
+t->next=p;
+break;}
+t=t->next}
+t=head;
+while(t!=null){
+printf("%d",t->data);
+t=t->next;}
+return 0;
+}
+
+
+
